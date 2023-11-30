@@ -24,9 +24,6 @@ resource "azuread_user" "user" {
   password            = random_password.password[each.key].result
 }
 
-data "azuread_client_config" "current" {}
-
-
 resource "azuread_group" "test_group" {
   display_name     = "test-group"
   owners           = [data.azuread_client_config.current.object_id]
@@ -36,4 +33,22 @@ resource "azuread_group" "test_group" {
     azuread_user.user["bart"].object_id,
     azuread_user.user["lisa"].object_id
   ]
+}
+
+
+resource "vault_identity_group" "test_group" {
+  name     = "test-group"
+  type     = "external"
+  policies = ["vault-ad-identity-group-poc"]
+
+  metadata = {
+    version = "1"
+  }
+}
+
+
+resource "vault_identity_group_alias" "test_group_azuread" {
+  name           = azuread_group.test_group.object_id
+  mount_accessor = vault_jwt_auth_backend.azure_oidc.accessor
+  canonical_id   = vault_identity_group.test_group.id
 }
