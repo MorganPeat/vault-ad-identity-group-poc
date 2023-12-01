@@ -39,11 +39,7 @@ resource "azuread_group" "test_group" {
 resource "vault_identity_group" "test_group" {
   name     = "test-group"
   type     = "external"
-  policies = ["vault-ad-identity-group-poc"]
-
-  metadata = {
-    version = "1"
-  }
+  policies = ["vault-ad-identity-group-poc", vault_policy.test_group_kv_writer.name]
 }
 
 
@@ -51,4 +47,14 @@ resource "vault_identity_group_alias" "test_group_azuread" {
   name           = azuread_group.test_group.object_id
   mount_accessor = vault_jwt_auth_backend.azure_oidc.accessor
   canonical_id   = vault_identity_group.test_group.id
+}
+
+resource "vault_policy" "test_group_kv_reader" {
+  name   = "test-group-kv-reader"
+  policy = templatefile("./policies/kv-reader.tftpl", { application = "test-group" })
+}
+
+resource "vault_policy" "test_group_kv_writer" {
+  name   = "test-group-kv-writer"
+  policy = templatefile("./policies/kv-writer.tftpl", { application = "test-group" })
 }
