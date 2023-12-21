@@ -62,21 +62,31 @@ provider "registry.terraform.io/hashicorp/random" {
 }
 
 provider "registry.terraform.io/hashicorp/vault" {
-  version     = "3.15.2"
-  constraints = "~> 3.15.0"
+  version     = "3.23.0"
+  constraints = "~> 3.23.0"
   hashes = [
-    "h1:Nev6nEf+2vRGQ+gw0Lvo45IxMNJjILMR67D1khIXCY8=",
-    "zh:106ef32d71e6a9c4b71a097dff34b7b497a8b5a495223480b004eed5e690bf75",
-    "zh:36409e772ebec1bd25f72fc792d771f3da07080e276505aed8d258ee410a4a52",
-    "zh:369616473917aebaa9503afe54ba50e9b60f3648242bebcad45fcfec97d83a2d",
-    "zh:6d4bd44204a25700cc18ae571ea4260f1d90daf654fbb47b3c1ce57a4ee5ad84",
-    "zh:7373e4cbed3ac8623eff1f60842a4d7110cd0a4f4e0770ba09e7fb82b5a1feaf",
+    "h1:+MSu9iMAo/4bBfVuKnf1Q+FVj7O1MLk5JO3TxFZ+dHU=",
+    "h1:0EdAX2gaS0I2WNGmFXuV5wECfyd9/LlRm5onWyIdwwM=",
+    "h1:2tkponlaFG9EaHih3JncL3Cpx8AgPjG1DUby/rQRv18=",
+    "h1:4xBH9v6FPSZhvQuxiQ+dTU03U0s+/kCN3MQ7jwGmClI=",
+    "h1:G7oSx70e5BiGsWsJrzb1wWJ4Y07Blqvr6dUreN7P4kU=",
+    "h1:Q7Ql3dhB0VlHyNNfeAPhlnyFIvWMhqX8AKn/sKhVHaM=",
+    "h1:S+X+nelOuXR1E2VEfJREFc/rEx+go08rpEzqp8CRk9A=",
+    "h1:SP6yggdKafep6oE3zFDYNyaFNfnHGnJbChrxPzj1oZ0=",
+    "h1:a+WylOOygFAE6nVK4SdOlcVosMZH4N5jvkW9h5xZrxM=",
+    "h1:goH65qO7uzcQBhSDXHsyBe2z7C0JZXmaPLJZHl1mbnk=",
+    "h1:izlB6ZwVwDs37L8qW7SHZtRLa2Ffu6lIkFif9RYJZcM=",
+    "zh:0f5d14007a4ae668cb2f52ed91985ace0169153643026bd44b9cf3704f271ded",
+    "zh:2e6b6435f3ee58c0a2c633e05b9e0091d31e653433028e455b681b601ac36712",
+    "zh:342bf9ff3f2500576354612fd5b04dd18e9f79d32fc9d913c435db78f72b2c50",
+    "zh:55e08eed3b1d8e5c395fa1ffd71cb98755dad6c52dcc4f48ea1faa3538ebe995",
+    "zh:613379682dc8ff5e447fc0a1d99a5f94015d18555cafc1adb8d3e5766c491222",
     "zh:78d5eefdd9e494defcb3c68d282b8f96630502cac21d1ea161f53cfe9bb483b3",
-    "zh:7d1ef1115e66fad2269362a585ab4a70d89df1451e256b662878dd4a40560ff6",
-    "zh:953183c58d5b7518f20ad2ff1e72848b59d31c326bf6beb06fb664214bf6fd7f",
-    "zh:9a82527862557064a44f7dbd79bb32843a12f079eddfdaeab47eb5dd4f83a1b7",
-    "zh:a0d659402f2b25547b06eb20fcc6a64828c7a4ad046b7d7e1e6a1facae2babe5",
-    "zh:b403172fa7c20309eb2646de1976c17b5f7b9b32146b5f568cecfab439a56699",
-    "zh:c20219be762ea5307f1503f3568f21b670e2c2cdb2fb219698b12d1b6c2523be",
+    "zh:8417ba0ac1c0708e4192a8eb4855cef6c64dc8e9b18e0944579d4b5031824ba9",
+    "zh:9218066d107c14dbc53061966dde55f88c056782458e2b59df1d185a948e2308",
+    "zh:b4f87e51739ccba8429f6d03f037a236261373dcd49df9edb6e17d41e013b155",
+    "zh:b864a6766d6690d416658b6996de06c844bcca2eb516cde4c639a3a267174440",
+    "zh:da1343c22bc096810f4902dfb035ae42920fd74fb9346c8ab4a0f93809b529c6",
+    "zh:e49210cc09b96932844950ff4fd2cf034fea0041612f43fb79d01e44ce030c8c",
   ]
 }
