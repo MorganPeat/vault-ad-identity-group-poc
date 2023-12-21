@@ -1,6 +1,10 @@
 # Grant ability to edit secrets at app-specific path
 
-path "kv/${application}/" {
+path "kv/" {
+  capabilities = ["list"]
+}
+
+path "kv/${application}" {
   capabilities = ["create", "read", "update", "delete", "list"]
 }
 

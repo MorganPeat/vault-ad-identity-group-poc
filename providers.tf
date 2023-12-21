@@ -5,7 +5,6 @@ provider "azuread" {}
 
 provider "random" {}
 
-# Enables access to secrets stored in vault.
 # Vault authN is by workload identity using env variables
 # stored in this workspace.
 # See https://developer.hashicorp.com/terraform/cloud-docs/workspaces/dynamic-provider-credentials/vault-configuration.
