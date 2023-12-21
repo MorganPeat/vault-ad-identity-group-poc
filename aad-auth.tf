@@ -1,4 +1,4 @@
-#
+####################################################################
 # Configures Vault authentication for Azure AD
 #
 # OIDC is used to authenticate AAD users with Vault.
@@ -7,6 +7,7 @@
 # - https://developer.hashicorp.com/vault/tutorials/auth-methods/oidc-auth-azure
 # - https://www.hashicorp.com/blog/integrating-azure-ad-identity-hashicorp-vault-part-1-application-auth-oidc
 # - https://www.hashicorp.com/blog/integrating-azure-ad-identity-with-hashicorp-vault-part-2-vault-oidc-auth-method
+####################################################################
 
 locals {
   redirect_uris = [
@@ -94,7 +95,7 @@ resource "vault_jwt_auth_backend" "azure_oidc" {
 resource "vault_jwt_auth_backend_role" "azure_role" {
   role_name             = "azure"
   backend               = vault_jwt_auth_backend.azure_oidc.path
-  user_claim            = "sub"
+  user_claim            = "name"
   groups_claim          = "groups"
   role_type             = "oidc"
   oidc_scopes           = ["https://graph.microsoft.com/.default"]

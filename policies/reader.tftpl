@@ -1,5 +1,9 @@
 # Grant ability to list and read secrets at app-specific path
 
+path "kv/" {
+  capabilities = ["list"]
+}
+
 path "kv/${application}/" {
   capabilities = ["read", "list"]
 }
