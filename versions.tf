@@ -1,6 +1,6 @@
 terraform {
 
-  required_version = "~> 1.6.0" # Matches the TFE workspace - must be changed in sync
+  required_version = "~> 1.7.0" # Matches the TFE workspace - must be changed in sync
 
   required_providers {
     azuread = {
